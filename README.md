@@ -78,6 +78,6 @@ A interface de usuário é acessada diretamente em [http://localhost:3000](http:
 
 ![Interface de Visualização de Funcionários](screenshots/listaFuncionarios.png)
 
-![Interface de Adição de Funcionário](screenshots/cadastroFuncionario.png)
+![Interface de Adição de Funcionário](screenshots/cadastroFuncionário.png)
 
 ![Interface de Edição de Funcionário](screenshots/edicaoFuncionario.png)
