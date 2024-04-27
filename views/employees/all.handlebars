@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="form-image">
+    <img src="/img/undraw_futuristic_interface_re_0cm.svg" alt="imagem-criar" />
+    <link rel="stylesheet" href="/css/stylesCreateEmployees.css" />
+    <link rel="stylesheet" href="/css/stylesEditBootStrap.css" />
+  </div>
+  <div class="form">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Cargo</th>
+          <th scope="col">Salário</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each employees}}
+          <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.role}}</td>
+            <td>{{this.salary}}</td>
+            <td><a href="/employees/edit/{{this.id}}"><i
+                  class="bi bi-pencil-square"
+                ></i></a></td>
+            <td>
+              <form
+                id="deleteForm{{this.id}}"
+                action="employees/remove"
+                method="POST"
+              >
+                <input type="hidden" name="id" value="{{this.id}}" />
+                <button
+                  type="submit"
+                  class="btn btn-link"
+                  onclick="return confirm('Tem certeza que deseja excluir este funcionário?')"
+                >
+                  <i class="bi bi-trash"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

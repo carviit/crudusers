@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="form-image">
+    <img src="/img/undraw_engineering_team_a7n2.svg" alt="imagem-criar" />
+    <link rel="stylesheet" href="/css/stylesCreateEmployees.css" />
+    <link rel="stylesheet" href="/css/stylesEditBootStrap.css" />
+  </div>
+  <div class="form">
+    <form action="/employees/add" method="POST">
+      <div class="form-header">
+        <div class="title">
+          <h1>Cadastrar funcionário</h1>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="input-box">
+          <label for="name">Nome</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Digite seu primeiro nome"
+            required
+          />
+        </div>
+
+        <div class="input-box">
+          <label for="role">Cargo</label>
+          <input
+            id="role"
+            type="text"
+            name="role"
+            placeholder="Digite o cargo"
+            required
+          />
+        </div>
+
+        <div class="input-box">
+          <label for="salary">Salário (R$):</label>
+          <input
+            type="number"
+            id="salary"
+            name="salary"
+            step="0.01"
+            min="0"
+            placeholder="0,00"
+            lang="pt-BR"
+          />
+        </div>
+      </div>
+
+      <input type="submit" value="Cadastrar" class="btn btn-info" />
+
+    </form>
+  </div>
+</div>
